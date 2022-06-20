@@ -277,3 +277,230 @@
 // findLongestWord("The quick brown fox jumped over the lazy dog");
 
 //-------------------------------------------------------------------------------
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   console.log(numbers);
+//   return numbers;
+// }
+
+// createArrayOfNumbers(14, 17);
+
+//-------------------------------------------------------------------------------
+
+// function filterArray(numbers, value) {
+//   const res = [];
+//   for (let i = 0; i <= numbers.length - 1; i += 1) {
+//     console.log(numbers[i]);
+//     if (numbers[i] > value) {
+//       res.push(numbers[i]);
+//     }
+//   }
+//   console.log(res);
+// }
+
+// filterArray([1, 2, 3, 4, 5], 3);
+
+//-------------------------------------------------------------------------------
+
+// function getCommonElements(array1, array2) {
+//   const res = [];
+//   for (let i = 0; i <= array1.length - 1; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       res.push(array1[i]);
+//     }
+//   }
+//   console.log(res);
+//   return res;
+// }
+
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+
+//-------------------------------------------------------------------------------
+
+// const planets = ["Earth", "Mars", "Venus"];
+
+// for (const planet of planets) {
+//   console.log(planet);
+// }
+
+//-------------------------------------------------------------------------------
+
+// function getEvenNumbers(start, end) {
+//   const res = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       res.push(i);
+//     }
+//   }
+//   console.log(res);
+// }
+
+// getEvenNumbers(6, 12);
+
+//-------------------------------------------------------------------------------
+
+// function includes(array, value) {
+//   let res = false;
+//   for (const el of array) {
+//     if (el === value) {
+//       res = true;
+//     }
+//   }
+//   console.log(res);
+//   return res;
+// }
+
+// includes([1, 2, 3, 4, 5], 3);
+
+//-------------------------------------------------------------------------------
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+// };
+
+// const aptRating = apartment["rating"];
+// const aptDescr = apartment["descr"];
+// const aptPrice = apartment["price"];
+// const aptTags = apartment["tags"];
+
+//-------------------------------------------------------------------------------
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+
+// for (const key in apartment) {
+//   keys.push(key);
+//   values.push(apartment[key]);
+// }
+
+// console.log(keys);
+// console.log(values);
+
+//-------------------------------------------------------------------------------
+
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+// }
+
+//-------------------------------------------------------------------------------
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// const keys = Object.keys(apartment);
+// for (const key of keys) {
+//   values.push(apartment[key]);
+// }
+// console.log(keys);
+// console.log(values);
+
+//-------------------------------------------------------------------------------
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const solo = Object.values(salaries);
+//   for (const salary of solo) {
+//     totalSalary += salary;
+//   }
+//   console.log(totalSalary);
+//   return totalSalary;
+// }
+
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+
+//-------------------------------------------------------------------------------
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+
+// console.log(hexColors);
+
+//-------------------------------------------------------------------------------
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   let result = 0;
+//   for (const prod of products) {
+//     if (prod.name === productName) {
+//       result = prod.price;
+//     }
+//   }
+//   console.log(result);
+//   if (result === 0) {
+//     return null;
+//   } else {
+//     return result;
+//   }
+// }
+
+// getProductPrice("Radar");
+
+//-------------------------------------------------------------------------------
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(propName) {
+  let result = [];
+  for (const prod of products) {
+    for (const key in prod) {
+      if (key === propName) {
+        result.push(prod[key]);
+      }
+    }
+  }
+  return result;
+}
+
+getAllPropValues("name");
