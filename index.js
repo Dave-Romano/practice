@@ -484,23 +484,39 @@
 
 //-------------------------------------------------------------------------------
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-function getAllPropValues(propName) {
-  let result = [];
-  for (const prod of products) {
-    for (const key in prod) {
-      if (key === propName) {
-        result.push(prod[key]);
-      }
-    }
-  }
-  return result;
+// function getAllPropValues(propName) {
+//   let result = [];
+//   for (const prod of products) {
+//     for (const key in prod) {
+//       if (key === propName) {
+//         result.push(prod[key]);
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+// getAllPropValues("name");
+
+//-------------------------------------------------------------------------------
+
+function named(word) {
+  let newWord = word;
+  const setWord = (val) => {
+    newWord = val;
+    console.log(newWord);
+  };
+  return { word, setWord };
 }
 
-getAllPropValues("name");
+const { word, setWord } = named("word");
+
+console.log(word);
+console.log(setWord("some"));
