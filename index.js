@@ -507,16 +507,41 @@
 
 //-------------------------------------------------------------------------------
 
-function named(word) {
-  let newWord = word;
-  const setWord = (val) => {
-    newWord = val;
-    console.log(newWord);
-  };
-  return { word, setWord };
-}
+// function named(word) {
+//   let newWord = word;
+//   const setWord = (val) => {
+//     newWord = val;
+//     console.log(newWord);
+//   };
+//   return { word, setWord };
+// }
 
-const { word, setWord } = named("word");
+// const { word, setWord } = named("word");
 
-console.log(word);
-console.log(setWord("some"));
+// console.log(word);
+// console.log(setWord("some"));
+
+//-------------------------------------------------------------------------------
+
+// const even_or_odd = (number) => (number % 2 ? "Odd" : "Even");
+
+// console.log(even_or_odd(3));
+
+//-------------------------------------------------------------------------------
+
+// const solution = (str, ending) =>
+//   str.slice(ending.length * -1) === ending ? true : false;
+
+// console.log(solution("a", ""));
+
+//-------------------------------------------------------------------------------
+
+const dateChange = (string) => {
+  const arr = string.split(".");
+  const newArr = [];
+  for (let el of arr) {
+    newArr.push(Number(el));
+  }
+};
+
+dateChange("10.12.2023.12.30");
