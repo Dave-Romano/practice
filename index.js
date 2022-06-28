@@ -536,12 +536,47 @@
 
 //-------------------------------------------------------------------------------
 
-const dateChange = (string) => {
-  const arr = string.split(".");
-  const newArr = [];
-  for (let el of arr) {
-    newArr.push(Number(el));
-  }
-};
+// const dateChange = (string) => {
+//   const arr = string.split(".");
+//   const newArr = [];
+//   for (let el of arr) {
+//     newArr.push(Number(el));
+//   }
+// };
 
-dateChange("10.12.2023.12.30");
+// dateChange("10.12.2023.12.30");
+
+//-------------------------------------------------------------------------------
+
+// switch (weekDay) {
+//       case "понедельник":
+//         setWeekDay("вторник");
+//         alert("Наступил вторник");
+//         break;
+//       case "вторник":
+//         setWeekDay("среда");
+//         alert("Наступила среда");
+//         break;
+//       case "среда":
+//         setWeekDay("четверг");
+//         alert("Наступил четверг");
+//         break;
+//       case "четверг":
+//         setWeekDay("пятница");
+//         alert("Наступила пятница");
+//         break;
+//       case "пятница":
+//         setWeekDay("суббота");
+//         alert("Наступила суббота");
+//         break;
+//       case "суббота":
+//         setWeekDay("воскресенье");
+//         alert("Наступило воскресенье");
+//         break;
+//       case "воскресенье":
+//         setWeekDay("понедельник");
+//         alert("Наступил понедельник");
+//         break;
+//       default:
+//         break;
+//     }
