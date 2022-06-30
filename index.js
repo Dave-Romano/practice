@@ -580,3 +580,76 @@
 //       default:
 //         break;
 //     }
+
+//-------------------------------------------------------------------------------
+
+// const obj1 = {
+//   name1: "Jack",
+//   Age1: 14,
+// };
+
+// console.log(obj1);
+
+// const name2 = "Garry";
+// const age2 = 15;
+
+// const obj2 = {
+//   name2,
+//   age2,
+// };
+
+// console.log(obj2);
+
+// const name3 = "name3";
+// const age3 = "age3";
+// const inputName = "Allan";
+// const inputAge = 18;
+
+// const obj3 = {
+//   [name3]: inputName,
+//   [age3]: inputAge,
+// };
+
+// console.log(obj3);
+
+// const obj4 = {};
+// obj4.name4 = "Tor";
+// obj4.age4 = 11;
+
+// console.log(obj4);
+
+//-------------------------------------------------------------------------------
+// THIS
+
+// const obj = {
+//   name: "Hotel California",
+//   type: "song",
+//   duration: "2:53",
+//   format: "mp3",
+//   rating: 2,
+//   updateRating(newRating) {
+//     this.rating = newRating;
+//   },
+// };
+// obj.updateRating(5);
+// console.log(obj);
+
+//-------------------------------------------------------------------------------
+
+// const friends = [
+//   { name: "Fred", age: 15, gender: "male", color: "purple" },
+//   { name: "Nick", age: 11, gender: "male", color: "yellow" },
+//   { name: "Uma", age: 19, gender: "female", color: "red" },
+//   { name: "Mary", age: 25, gender: "female", color: "green" },
+//   { name: "Jake", age: 31, gender: "male", color: "blue" },
+// ];
+
+// console.log(friends);
+// console.table(friends);
+
+// for (const friend of friends) {
+//   console.log(friend);
+//   console.log(friend.name);
+// }
+
+//-------------------------------------------------------------------------------
