@@ -653,3 +653,7 @@
 // }
 
 //-------------------------------------------------------------------------------
+
+const todayImLazyPeaceOfShit = true;
+console.log("David is lazy peace of shit?", todayImLazyPeaceOfShit);
+//-------------------------------------------------------------------------------
